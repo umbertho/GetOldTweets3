@@ -92,7 +92,7 @@ class TweetManager:
                     tweet.favorites = int(tweetPQ("span.ProfileTweet-action--favorite span.ProfileTweet-actionCount").attr("data-tweet-stat-count").replace(",", ""))
                     tweet.replies = int(tweetPQ("span.ProfileTweet-action--reply span.ProfileTweet-actionCount").attr("data-tweet-stat-count").replace(",", ""))
                     tweet.id = tweetPQ.attr("data-tweet-id")
-                    tweet.permalink = 'https://twitter.com' + tweetPQ.attr("data-permalink-path")
+                    tweet.permalink = 'https://mobile.twitter.com' + tweetPQ.attr("data-permalink-path")
                     tweet.author_id = int(tweetPQ("a.js-user-profile-link").attr("data-user-id"))
 
                     dateSec = int(tweetPQ("small.time span.js-short-timestamp").attr("data-time"))
